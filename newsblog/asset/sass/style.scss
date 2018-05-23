@@ -1,0 +1,49 @@
+// bacground
+$bg-purple: #48009F;
+$bg-yellow: #FFEE4C;
+$bg-light-ashy: #111111;
+$bg-black: #000000;
+$bg-light-green: #0BE6AF;
+
+// color
+
+$color-light-green: #0BE6AF;
+
+
+// height
+@mixin height($hight){
+    height: $hight;
+} 
+
+.navigation{
+    background: $bg-purple;
+}
+.logo{
+    a{
+        color: $color-light-green
+    }
+}
+
+
+
+// future part
+
+.future-card-big img{     
+       @include height(450px); 
+}
+.future-aside-card img{
+    @include height(180px); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
