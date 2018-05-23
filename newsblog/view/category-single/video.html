@@ -1,0 +1,60 @@
+
+ 
+
+<div class="row" ng-controller='allVideoCategoryClt'>
+	
+        <div class="col-md-12">
+            
+            <div class="row">
+                <div class="col-md-2 bg-dark">	
+                    <ul class="list-group text-white ">
+                      <li class="list-group-item border-0"  style="background: transparent;" >all</li>
+                      <li class="list-group-item border-0"  style="background: transparent;" >entertainment</li>
+                      <li class="list-group-item border-0"  style="background: transparent;" >politics</li>
+                      <li class="list-group-item border-0"  style="background: transparent;" >sports</li>
+                      <li class="list-group-item border-0"  style="background: transparent;" >tecnology</li>
+                    </ul>
+                </div>
+    
+    
+                <div class="col-md-10 pr-4 pb-5 pt-3">
+                        <h1 class="text-uppercase text-center" style="font-size: 32px">videos</h1>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3" ng-repeat='user in aside | filter:categories |  limitTo:limiTation'>	   
+                                <a class="d-block mt-5" href="#" >
+                                    <div class="card future-aside-card border-0 rounded-0">
+                                    <img class="card-img-top mb-2 rounded-0 "  src="{{user.imgUrl}}" alt="Card image cap">
+                                    <div class="card-body p-0">		     
+                                        <p class="card-text text-secondary mb-2 text-uppercase font-weight-bold" style="font-size: 11px"><span>{{user.categories}}</span>/ <small >{{user.date}}</small></p>
+                                        
+                                            <div class="media">
+                                            <p class="mb-0 mr-3 text-secondary font-weight-bold" style="font-size: 30px ">{{user.si}}</p>
+                                            <div class="media-body p-0">
+                                                 <h2 class="font-weight-bold text-dark" style="font-size: 15px; font-weight: 600">{{user.posttitle}}</h2> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </a> 
+                            </div> 
+    
+                            <div class="col-md-12 text-center mt-3">
+                                <a   class="text-danger text-uppercase  "  href="#">load more
+                                     <i class="fa fa-arrow-down"></i></a>
+                            </div>
+                    </div>
+                </div>
+    
+    
+            </div>
+        </div>
+    
+    
+                     
+    
+    
+    </div>
+    
+    
+    
+    

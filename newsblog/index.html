@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<link rel="icon" href="asset/images/favicon.icon">
+
+	
+	<link rel="stylesheet" href="asset/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="asset/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="asset/sass/style.css">
+
+
+
+
+
+
+	<script src="angular.js"></script>	
+	<script src="ui-route.js"></script> 
+	<script src="asset/dependence/ocLazyLoad.js"></script> 
+	<script src="asset/js/ui-bootstrap-tpls-3.0.3.min.js"></script>
+
+
+	<!-- bootstrap -->
+	<script src="asset/js/jquery.js"></script>
+	<script src="asset/js/bootstrap.min.js"></script>
+	<!-- <script src="asset/js/jquery-slim.min.js"></script> -->
+	<script src="asset/js/popper.min.js"></script>
+
+
+	<!-- dependances seting -->
+	<script src="moduleDpendence.js"></script> 
+
+	<!-- genarel settings -->
+    <script src="app.js"></script>
+
+	 <!--blog route  -->
+	<script src="states/blogRoute.js"></script>
+
+
+
+
+	<!-- service -->
+	<script src="services/blog/blogfetureLeftAsid.js"></script>
+
+
+	<!-- blog controller -->	 
+	<script src="controller/commonClt.js"></script>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body ng-app='myapp'>  
+
+
+<main class="">
+<!-- banner	part -->
+<section ng-controller="bannerClt">
+	<div class="container-fluid" ng-include src="banner.url"></div>
+</section>
+
+
+
+
+
+
+
+
+<!--nav + logo part -->
+	<section class="navigation" class=" pb-3">
+		<div class="container">
+			<div class="row d-flex justify-content-between">
+					<header class="mt-4" ng-controller="headerClt">
+							<div class="text-white" ng-include src='header.url' class="container"></div>
+					</header> 
+					<div class="logo"  ng-controller="logoClt">
+						<div class="container" ng-include src='logo.url'></div>
+					</div>
+			</div>
+		</div> 
+	</section>
+ 
+
+
+<!-- main container -->
+	<section>			
+		<div class="container-fluid"> 
+		 	<ui-view></ui-view>
+		</div>
+	</section> 
+
+
+</main>
+
+
+<!-- footer section --> 
+<footer ng-controller='footerClt' class="" style="background: #111">
+	<div ng-include src="footer.url" class="container"></div>
+</footer> 
+<!-- copyright -->
+<footer class="pt-3 pb-3" style="background: #000" ng-controller="copyrightClt">
+	<div class="container" ng-include src="copyright.url"></div>
+</footer>
+
+</body>
+</html>
